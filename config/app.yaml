@@ -1,0 +1,12 @@
+name: "maglev"
+environment: "development"
+address: "localhost"
+port: 3000
+pid: "starship.pid"
+path:
+  data: "~/.local/share/maglev/app/"
+  cache: "~/.cache/maglev/app/"
+maintainance:
+  enabled: false
+  sessions: true
+  announcement: "Updating!"
