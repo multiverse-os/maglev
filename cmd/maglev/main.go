@@ -19,7 +19,7 @@ import (
 // should be added
 func main() {
 	cmd, _ := cli.New(cli.App{
-		Name: "starshipyard",
+		Name: "maglev",
 		// TODO: Consider method from config giving us the outputs to avoid the
 		// extra import (for simplicity not because it actually reduces resources
 		// beacuse it naturally is eventually called in by app pkg
@@ -27,7 +27,7 @@ func main() {
 		// outputs defined by our higher level application [consistency!]
 		//Outputs:     cli.Outputs{framework.DefaultOutputs()},
 		Version:     cli.Version{Major: 0, Minor: 1, Patch: 1},
-		Description: "A command-line tool for controling the starshipyard server, scaffolding boilerplate code, and executing developer defined commands",
+		Description: "A command-line tool for controling the maglev server, scaffolding boilerplate code, and executing developer defined commands",
 		GlobalFlags: cli.Flags(
 			cli.Flag{
 				Category:    "Server",
