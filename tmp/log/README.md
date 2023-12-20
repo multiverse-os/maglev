@@ -1,1 +1,1 @@
-# Starship `log` default directory
+# Maglev `log` default directory

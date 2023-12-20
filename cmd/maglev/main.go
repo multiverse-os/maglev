@@ -5,9 +5,9 @@ import (
 	"os"
 
 	app "github.com/multiverse-os/maglev-app"
-	config "github.com/multiverse-os/maglev/config"
 
 	cli "github.com/multiverse-os/cli"
+	config "github.com/multiverse-os/maglev/config"
 )
 
 // TODO: Review the additional functionality provided by Rails binary, so that
@@ -55,12 +55,12 @@ func main() {
 			cli.Command{
 				Name:        "server",
 				Alias:       "s",
-				Description: "Options for controlling starshipyard HTTP server",
+				Description: "Options for controlling maglev HTTP server",
 				Subcommands: cli.Commands(
 					cli.Command{
 						Name:        "start",
 						Alias:       "s",
-						Description: "Start the starship yard http server",
+						Description: "Start the maglev http server",
 						Flags: cli.Flags(
 							cli.Flag{
 								Name:        "daemonize",
@@ -143,7 +143,7 @@ func main() {
 			cli.Command{
 				Name:        "console",
 				Alias:       "c",
-				Description: "Start the starship yard console interface",
+				Description: "Start the maglev yard console interface",
 				Action: func(c *cli.Context) error {
 					fmt.Println("[CONSOLE] console interface is not implemented yes")
 					return nil

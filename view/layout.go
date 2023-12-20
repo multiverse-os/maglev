@@ -24,7 +24,7 @@ func DefaultTemplate(title string, yield html.Element) html.Element {
 				html.Div.Class("container").Containing(
 					html.Div.Class("navbar-brand").Containing(
 						html.H1.Class("title").Containing(
-							html.A.Class("site-title").Href("/").Text("Starship"),
+							html.A.Class("site-title").Href("/").Text("Maglev"),
 						),
 					),
 					html.Div.Class("navbar-menu").Containing(
