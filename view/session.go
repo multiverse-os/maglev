@@ -1,9 +1,9 @@
 package view
 
 import (
-	html "github.com/multiverse-os/maglev/html"
-
 	form "github.com/multiverse-os/maglev-app/view/component/form"
+
+	html "github.com/multiverse-os/maglev/html"
 )
 
 // TODO: These need to be returning a view
