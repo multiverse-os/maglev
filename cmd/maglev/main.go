@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	app "github.com/multiverse-os/maglev-app"
+	app "github.com/multiverse-os/maglev/app"
 	config "github.com/multiverse-os/maglev/config"
 
 	cli "github.com/multiverse-os/cli"
