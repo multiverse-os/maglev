@@ -1,0 +1,12 @@
+git: 
+  repository: "https://github.com/multiverse-os/maglev-app"
+  branch: "main"
+build:
+  commands:
+    make:
+    install:
+    cleanup: "rm bin/maglev"
+hook:
+  on_change:
+    file_types: "*.go"
+    command: "go build && go server stop && go server start"
