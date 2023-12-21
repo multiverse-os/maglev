@@ -71,7 +71,7 @@ func main() {
 						Action: func(c *cli.Context) error {
 							cfg, err := config.Load("app/config/app.yaml")
 							if err != nil {
-								cfg = config.DefaultConfig()
+								cfg = config.DefaultConfig(cfg.Name)
 							}
 
 							// TODO: We also need helpers for gathering environmental variabls
