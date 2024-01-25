@@ -21,7 +21,7 @@ func Init(cfg framework.Config) App {
 	app.KV(framework.ModelStore)
 	app.KV(framework.CacheStore)
 
-	app.Framework.CacheDB().Put([]byte{"key"}, []byte{"value"})
+	app.Framework.CacheDB().Store.Put([]byte("key"), []byte("value"))
 
 	// Model
 	app.NewModel("user")
