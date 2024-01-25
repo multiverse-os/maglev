@@ -16,8 +16,8 @@ github.com/multiverse-os/maglev v0.1.1 h1:zjbdjgZSR0JE6HC7WfAluvtM4AiCvE95TH+LlH
 github.com/multiverse-os/maglev v0.1.1/go.mod h1:vM17jlvh4WqrKJ5QFXJgGcJO/j5beQY18sIBZKPbdug=
 github.com/multiverse-os/muid v0.1.0 h1:ADIt5VE32dSOPROCCbSN5EA1oeT4ZzOS+qRkBqFSTC4=
 github.com/multiverse-os/muid v0.1.0/go.mod h1:9WsIap41brjV/Ihhbut9THOt+zNaBkz9fhChrtbyy2k=
-github.com/multiverse-os/service v0.1.1 h1:qPwJl6/EvTKwzjAP1Yw8YCCVmOfv+0MV5QKiIX3GMVs=
-github.com/multiverse-os/service v0.1.1/go.mod h1:STU22NZFE49Jq8cJzeIZNsR50fof5cD9eL5/1uJz6VQ=
+github.com/multiverse-os/service v0.1.2 h1:x0oKPoqPy/FPUL/4VIetEZhkChj7tp5PP9hdnqJXFFI=
+github.com/multiverse-os/service v0.1.2/go.mod h1:STU22NZFE49Jq8cJzeIZNsR50fof5cD9eL5/1uJz6VQ=
 golang.org/x/crypto v0.17.0 h1:r8bRNjWL3GshPW3gkd+RpvzWrZAwPS49OmTGZ/uhM4k=
 golang.org/x/crypto v0.17.0/go.mod h1:gCAAfMLgwOJRpTjQ2zCCt2OcSfYMTeZVSRtQlPC7Nq4=
 golang.org/x/sys v0.15.0 h1:h48lPFYpsTvQJZF4EKyI4aLHaev3CxivZmv7yZig9pc=
