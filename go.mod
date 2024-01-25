@@ -5,6 +5,7 @@ go 1.19
 require (
 	github.com/multiverse-os/cli v0.1.0
 	github.com/multiverse-os/maglev v0.1.1
+	github.com/multiverse-os/service v0.1.2
 )
 
 require (
@@ -31,10 +32,7 @@ replace (
 	github.com/multiverse-os/cli/terminal/text/banner => github.com/multiverse-os/banner v0.1.0
 )
 
-require (
-	github.com/multiverse-os/muid v0.1.0 // indirect
-	github.com/multiverse-os/service v0.1.1 // indirect
-)
+require github.com/multiverse-os/muid v0.1.0 // indirect
 
 require (
 	golang.org/x/crypto v0.17.0 // indirect
