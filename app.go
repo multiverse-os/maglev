@@ -4,6 +4,8 @@ package app
 // It would be nice if we only needed to interact with framework, and framework
 // dealt with the submodules itself to simplify things as much as possible
 import (
+	"fmt"
+
 	controller "github.com/multiverse-os/maglev-app/controller"
 	model "github.com/multiverse-os/maglev-app/model"
 
@@ -22,6 +24,8 @@ func Init(cfg framework.Config) App {
 	app.KV(framework.CacheStore)
 
 	app.Framework.CacheDB().Store.Put([]byte("key"), []byte("value"))
+	val, _ := app.Framework.CacheDB().Store.Get([]byte("key"))
+	fmt.Printf("GET[on]CacheDB app.Framework.CacheDB().Store.Get([]byte('key')):", string(val))
 
 	// Model
 	app.NewModel("user")
