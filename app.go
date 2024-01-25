@@ -21,7 +21,7 @@ func Init(cfg framework.Config) App {
 	app.KV(framework.ModelStore)
 
 	// Model
-	//app.NewModel("user")
+	app.NewModel("user")
 
 	// Controller
 	app.NewController("app")
