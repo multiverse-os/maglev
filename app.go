@@ -18,7 +18,7 @@ func Init(cfg framework.Config) App {
 	app := App{framework.Init(cfg)}
 
 	// Database Initialization
-	app.KV(framework.Model)
+	app.KV(framework.ModelStore)
 
 	// Model
 	//app.NewModel("user")
