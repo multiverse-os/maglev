@@ -19,6 +19,9 @@ func Init(cfg framework.Config) App {
 
 	// Database Initialization
 	app.KV(framework.ModelStore)
+	app.KV(framework.CacheStore)
+
+	app.Framework.CacheDB().Put([]byte{"key"}, []byte{"value"})
 
 	// Model
 	app.NewModel("user")
