@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
 	app "github.com/multiverse-os/maglev"
@@ -69,6 +68,7 @@ func main() {
 							},
 						),
 						Action: func(c *cli.Context) error {
+							c.CLI.Log("Starting maglev app...")
 							cfg, err := config.Load("app/config/app.yaml")
 							if err != nil {
 								cfg = config.DefaultConfig(cfg.Name)
@@ -106,8 +106,8 @@ func main() {
 						Name:        "model",
 						Description: "Build a model template with the specified object data",
 						Action: func(c *cli.Context) error {
-							fmt.Println("code generation functionality is not implemented yet")
-							fmt.Println("test code has been built, it just needs to be migrated into the base and will be available shortly")
+							c.CLI.Log("code generation functionality is not implemented yet")
+							c.CLI.Log("test code has been built, it just needs to be migrated into the base and will be available shortly")
 							return nil
 						},
 					},
@@ -115,8 +115,8 @@ func main() {
 						Name:        "controller",
 						Description: "Build a controller template with the specified object data",
 						Action: func(c *cli.Context) error {
-							fmt.Println("code generation functionality is not implemented yet")
-							fmt.Println("test code has been built, it just needs to be migrated into the base and will be available shortly")
+							c.CLI.Log("code generation functionality is not implemented yet")
+							c.CLI.Log("test code has been built, it just needs to be migrated into the base and will be available shortly")
 							return nil
 						},
 					},
@@ -124,8 +124,8 @@ func main() {
 						Name:        "view",
 						Description: "Build a view template with the specified object data",
 						Action: func(c *cli.Context) error {
-							fmt.Println("code generation functionality is not implemented yet")
-							fmt.Println("test code has been built, it just needs to be migrated into the base and will be available shortly")
+							c.CLI.Log("code generation functionality is not implemented yet")
+							c.CLI.Log("test code has been built, it just needs to be migrated into the base and will be available shortly")
 							return nil
 						},
 					},
@@ -133,8 +133,8 @@ func main() {
 						Name:        "job",
 						Description: "Build a job template with the specified object data",
 						Action: func(c *cli.Context) error {
-							fmt.Println("code generation functionality is not implemented yet")
-							fmt.Println("test code has been built, it just needs to be migrated into the base and will be available shortly")
+							c.CLI.Log("code generation functionality is not implemented yet")
+							c.CLI.Log("test code has been built, it just needs to be migrated into the base and will be available shortly")
 							return nil
 						},
 					},
@@ -145,17 +145,17 @@ func main() {
 				Alias:       "c",
 				Description: "Start the maglev yard console interface",
 				Action: func(c *cli.Context) error {
-					fmt.Println("[CONSOLE] console interface is not implemented yes")
+					c.CLI.Log("[CONSOLE] console interface is not implemented yes")
 					return nil
 				},
 			},
 		),
-		Actions: cli.Actions{
-			Fallback: func(c *cli.Context) error {
-				c.CLI.Log("Fallback action")
-				return nil
-			},
-		},
+		//Actions: cli.Actions{
+		//	Fallback: func(c *cli.Context) error {
+		//		c.CLI.Log("Fallback action")
+		//		return nil
+		//	},
+		//},
 	})
 
 	cmd.Parse(os.Args).Execute()
