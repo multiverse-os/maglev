@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/multiverse-os/cli v0.1.0
-	github.com/multiverse-os/webkit v0.1.1
+	github.com/multiverse-os/webkit v0.1.2
 )
 
 require (
@@ -34,8 +34,16 @@ replace (
 require github.com/multiverse-os/muid v0.1.0 // indirect
 
 require (
+	git.mills.io/prologic/bitcask v1.0.2 // indirect
+	github.com/abcum/lcp v0.0.0-20201209214815-7a3f3840be81 // indirect
+	github.com/akrylysov/pogreb v0.10.2 // indirect
+	github.com/gofrs/flock v0.8.0 // indirect
 	github.com/multiverse-os/service v0.1.2 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
+	github.com/plar/go-adaptive-radix-tree v1.0.4 // indirect
+	github.com/sirupsen/logrus v1.8.1 // indirect
 	golang.org/x/crypto v0.17.0 // indirect
+	golang.org/x/exp v0.0.0-20200228211341-fcea875c7e85 // indirect
 	golang.org/x/sys v0.15.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect

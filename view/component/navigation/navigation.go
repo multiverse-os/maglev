@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	html "github.com/multiverse-os/maglev/html"
+	html "github.com/multiverse-os/webkit/html"
 )
 
 type Sitemap struct {
