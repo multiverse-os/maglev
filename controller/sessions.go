@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	view "github.com/multiverse-os/maglev-app/view"
+	view "github.com/multiverse-os/maglev/view"
 )
 
 func (c Controller) Login(body http.ResponseWriter, request *http.Request) {

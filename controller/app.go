@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	view "github.com/multiverse-os/maglev-app/view"
+	view "github.com/multiverse-os/maglev/view"
 )
 
 // Example:

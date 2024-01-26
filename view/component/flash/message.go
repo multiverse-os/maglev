@@ -1,7 +1,7 @@
 package flash
 
 import (
-	html "github.com/multiverse-os/maglev/html"
+	html "github.com/multiverse-os/webkit/html"
 )
 
 // Notifications may be a better name

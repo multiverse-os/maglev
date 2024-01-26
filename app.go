@@ -6,10 +6,10 @@ package app
 import (
 	"fmt"
 
-	controller "github.com/multiverse-os/maglev-app/controller"
-	model "github.com/multiverse-os/maglev-app/model"
+	controller "github.com/multiverse-os/maglev/controller"
+	model "github.com/multiverse-os/maglev/model"
 
-	framework "github.com/multiverse-os/maglev"
+	framework "github.com/multiverse-os/webkit"
 )
 
 type App struct {

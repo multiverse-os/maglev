@@ -1,9 +1,9 @@
 package partial
 
 import (
-	form "github.com/multiverse-os/maglev-app/view/component/form"
+	form "github.com/multiverse-os/maglev/view/component/form"
 
-	html "github.com/multiverse-os/maglev/html"
+	html "github.com/multiverse-os/webkit/html"
 )
 
 func Root() html.Element {

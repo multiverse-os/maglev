@@ -1,7 +1,7 @@
 package task
 
 import (
-	model "github.com/multiverse-os/maglev/model"
+	model "github.com/multiverse-os/webkit/model"
 )
 
 type Record struct {

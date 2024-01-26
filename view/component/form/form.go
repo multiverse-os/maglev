@@ -1,8 +1,8 @@
 package form
 
 import (
-	html "github.com/multiverse-os/maglev/html"
-	//attribute "github.com/multiverse-os/maglev/html/framework/attribute"
+	html "github.com/multiverse-os/webkit/html"
+	//attribute "github.com/multiverse-os/webkit/html/framework/attribute"
 )
 
 func TextInput(name, placeholder string) html.Element {

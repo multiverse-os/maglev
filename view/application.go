@@ -1,7 +1,7 @@
 package view
 
 import (
-	html "github.com/multiverse-os/maglev/html"
+	html "github.com/multiverse-os/webkit/html"
 )
 
 // New paradigm is views return a VIEW and helpers and other such stuff return
@@ -14,7 +14,7 @@ func Root() html.Element {
 	return DefaultTemplate("title",
 		html.Div.Class("content").Containing(
 			html.Section.Class("section is-fullwidth is-primary").Containing(
-				html.H1.Class("title").Text("Maglev"),
+				html.H1.Class("title").Text("maglev: Go webframework"),
 				html.H5.Class("subtitle").Text("A web application framework designed for simplicity, single binary, single response, inspired by rails"),
 			),
 		),

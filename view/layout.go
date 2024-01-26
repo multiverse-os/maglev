@@ -1,9 +1,9 @@
 package view
 
 import (
-	css "github.com/multiverse-os/maglev-app/view/asset/css"
+	css "github.com/multiverse-os/maglev/view/asset/css"
 
-	html "github.com/multiverse-os/maglev/html"
+	html "github.com/multiverse-os/webkit/html"
 )
 
 // TODO: Views should use this default template, and extend it for each page by

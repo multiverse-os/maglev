@@ -1,8 +1,8 @@
 package component
 
 import (
-	html "github.com/multiverse-os/maglev/html"
-	attribute "github.com/multiverse-os/maglev/html/attribute"
+	html "github.com/multiverse-os/webkit/html"
+	attribute "github.com/multiverse-os/webkit/html/attribute"
 )
 
 // ALLOW LIST

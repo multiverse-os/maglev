@@ -1,7 +1,7 @@
 package model
 
 import (
-	framework "github.com/multiverse-os/maglev"
+	framework "github.com/multiverse-os/webkit"
 )
 
 // TODO: I want to switch it to webframe to match framekit and cli by being

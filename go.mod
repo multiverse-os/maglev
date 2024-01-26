@@ -1,10 +1,10 @@
-module github.com/multiverse-os/maglev-app
+module github.com/multiverse-os/maglev
 
 go 1.19
 
 require (
 	github.com/multiverse-os/cli v0.1.0
-	github.com/multiverse-os/maglev v0.1.1
+	github.com/multiverse-os/webkit v0.1.1
 )
 
 require (
