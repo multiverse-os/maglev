@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/multiverse-os/cli v0.1.0
-	github.com/multiverse-os/webkit v0.1.2
+	github.com/multiverse-os/webkit v0.1.3
 )
 
 require (

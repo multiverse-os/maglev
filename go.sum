@@ -250,8 +250,8 @@ github.com/multiverse-os/muid v0.1.0 h1:ADIt5VE32dSOPROCCbSN5EA1oeT4ZzOS+qRkBqFS
 github.com/multiverse-os/muid v0.1.0/go.mod h1:9WsIap41brjV/Ihhbut9THOt+zNaBkz9fhChrtbyy2k=
 github.com/multiverse-os/service v0.1.2 h1:x0oKPoqPy/FPUL/4VIetEZhkChj7tp5PP9hdnqJXFFI=
 github.com/multiverse-os/service v0.1.2/go.mod h1:STU22NZFE49Jq8cJzeIZNsR50fof5cD9eL5/1uJz6VQ=
-github.com/multiverse-os/webkit v0.1.2 h1:h33Ti2j/JvCxWBbL9tvQOyRdFPtwI9A5pBEnFAhWc8g=
-github.com/multiverse-os/webkit v0.1.2/go.mod h1:Cdxln30ru/FbxDUiwRcGYIcqyS3LtahcflmimFmql+8=
+github.com/multiverse-os/webkit v0.1.3 h1:5ZmT6Q+QDFSynu14dCgV6Cuf72a+nok6tkVr+lcki+M=
+github.com/multiverse-os/webkit v0.1.3/go.mod h1:Cdxln30ru/FbxDUiwRcGYIcqyS3LtahcflmimFmql+8=
 github.com/mwitkow/go-conntrack v0.0.0-20161129095857-cc309e4a2223/go.mod h1:qRWi+5nqEBWmkhHvq77mSJWrCKwh8bxhgT7d/eI7P4U=
 github.com/oklog/ulid v1.3.1/go.mod h1:CirwcVhetQ6Lv90oh/F+FBtV6XMibvdAFo93nm5qn4U=
 github.com/pascaldekloe/goe v0.0.0-20180627143212-57f6aae5913c/go.mod h1:lzWF7FIEvWOWxwDKqyGYQf6ZUaNfKdP144TG7ZOy1lc=
