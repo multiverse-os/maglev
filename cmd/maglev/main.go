@@ -69,7 +69,8 @@ func main() {
 						),
 						Action: func(c *cli.Context) error {
 							c.CLI.Log("Starting maglev app...")
-							cfg, err := config.Load("app/config/app.yaml")
+							cfg, err := config.Load("config/app.yaml")
+							// TODO: This is not throwing errors when no YAML file exists, it just gives runtime nil error
 							if err != nil {
 								cfg = config.DefaultConfig(cfg.Name)
 							}
