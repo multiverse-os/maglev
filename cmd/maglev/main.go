@@ -55,48 +55,41 @@ func main() {
 				Name:        "server",
 				Alias:       "s",
 				Description: "Options for controlling maglev HTTP server",
-				Subcommands: cli.Commands(
-					cli.Command{
-						Name:        "start",
-						Alias:       "s",
-						Description: "Start the maglev http server",
-						Flags: cli.Flags(
-							cli.Flag{
-								Name:        "daemonize",
-								Alias:       "d",
-								Description: "Daemonize the http server",
-							},
-						),
-						Action: func(c *cli.Context) error {
-							c.CLI.Log("Starting maglev app...")
-							cfg, err := config.Load("config/app.yaml")
-							// TODO: This is not throwing errors when no YAML file exists, it just gives runtime nil error
-							if err != nil {
-								cfg = config.DefaultConfig(cfg.Name)
-							}
-
-							// TODO: We also need helpers for gathering environmental variabls
-							// to cascade through: file config => cli config => env config
-							// with env config overriding all other methods of configuration
-							cfg.Address = c.Flag("address").String()
-							cfg.Port = c.Flag("port").Int()
-
-							// TODO: If inside the CLI application we are using server.Log
-							// here, we need to be consistent; we should initialize an
-							// app.App object and assign the default Outputs to cli.Outputs
-							server := app.Init(cfg)
-							if c.Flag("daemonize").Bool() {
-								server.Log("launching in daemon mode...")
-								server.Log("not implemented")
-							} else {
-								server.Log("launching with terminal attached to server")
-								server.Log("http server listening on [", cfg.Address, ":", cfg.Port, "]")
-								server.Start()
-							}
-							return nil
-						},
+				Flags: cli.Flags(
+					cli.Flag{
+						Name:        "daemonize",
+						Alias:       "d",
+						Description: "Daemonize the http server",
 					},
 				),
+				Action: func(c *cli.Context) error {
+					c.CLI.Log("Starting maglev app...")
+					cfg, err := config.Load("config/app.yaml")
+					// TODO: This is not throwing errors when no YAML file exists, it just gives runtime nil error
+					if err != nil {
+						cfg = config.DefaultConfig(cfg.Name)
+					}
+
+					// TODO: We also need helpers for gathering environmental variabls
+					// to cascade through: file config => cli config => env config
+					// with env config overriding all other methods of configuration
+					cfg.Address = c.Flag("address").String()
+					cfg.Port = c.Flag("port").Int()
+
+					// TODO: If inside the CLI application we are using server.Log
+					// here, we need to be consistent; we should initialize an
+					// app.App object and assign the default Outputs to cli.Outputs
+					server := app.Init(cfg)
+					if c.Flag("daemonize").Bool() {
+						server.Log("launching in daemon mode...")
+						server.Log("not implemented")
+					} else {
+						server.Log("launching with terminal attached to server")
+						server.Log("http server listening on [", cfg.Address, ":", cfg.Port, "]")
+						server.Start()
+					}
+					return nil
+				},
 			},
 			cli.Command{
 				Name:        "generate",
