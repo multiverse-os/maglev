@@ -3,6 +3,10 @@ package app
 // TODO
 // It would be nice if we only needed to interact with framework, and framework
 // dealt with the submodules itself to simplify things as much as possible
+
+// TODO: So this should kinda feel like application.rb in the root folder where
+// one can basically setup the application somewhere around initialization
+// and this is initialization.
 import (
 	"fmt"
 
@@ -20,12 +24,20 @@ func Init(cfg framework.Config) App {
 	app := App{framework.Init(cfg)}
 
 	// Database Initialization
-	app.KV(framework.ModelStore)
-	app.KV(framework.CacheStore)
+	// TODO: This is a alias to setup all three of these basic databases
+	app.InitializeDBs()
+	//app.KV(framework.ModelStore)
+	//app.KV(framework.CacheStore)
+	//app.KV(framework.SessionStore)
 
-	app.Framework.CacheDB().Store.Put([]byte("key"), []byte("value"))
-	val, _ := app.Framework.CacheDB().Store.Get([]byte("key"))
-	fmt.Printf("GET[on]CacheDB app.Framework.CacheDB().Store.Get([]byte('key')): %v\n", string(val))
+	app.Framework.Cache().Put([]byte("key"), []byte("value"))
+
+	val, _ := app.Framework.Cache().Get([]byte("key"))
+
+	fmt.Printf(
+		"GET[on]CacheDB app.Framework.Cache().Get([]byte('key')): %v\n",
+		string(val),
+	)
 
 	// Model
 	app.NewModel("user")
