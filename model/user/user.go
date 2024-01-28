@@ -1,7 +1,7 @@
 package user
 
 import (
-	model "github.com/multiverse-os/webkit/model"
+	model "github.com/multiverse-os/webframe/model"
 )
 
 // AH BUT THIS IS GLOBAL; omg omg lets make omg omg a fucntion?

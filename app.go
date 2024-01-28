@@ -9,7 +9,7 @@ import (
 	controller "github.com/multiverse-os/maglev/controller"
 	model "github.com/multiverse-os/maglev/model"
 
-	framework "github.com/multiverse-os/webkit"
+	framework "github.com/multiverse-os/webframe"
 )
 
 type App struct {

@@ -1,7 +1,7 @@
 package controller
 
 import (
-	framework "github.com/multiverse-os/webkit"
+	framework "github.com/multiverse-os/webframe"
 )
 
 type Controller framework.Controller

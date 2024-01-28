@@ -1,7 +1,7 @@
 package view
 
 import (
-	html "github.com/multiverse-os/webkit/html"
+	html "github.com/multiverse-os/webframe/html"
 )
 
 // New paradigm is views return a VIEW and helpers and other such stuff return

@@ -1,7 +1,7 @@
 package view
 
 import (
-	framework "github.com/multiverse-os/webkit"
+	framework "github.com/multiverse-os/webframe"
 )
 
 // TODO: Should it be embedded or same type

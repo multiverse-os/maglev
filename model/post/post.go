@@ -1,6 +1,6 @@
 package post
 
-import "github.com/multiverse-os/webkit/model"
+import "github.com/multiverse-os/webframe/model"
 
 // TODO: Record is naturally going to need to be tied to DB and collection but
 // knowing myself I already did that through the model.Record call

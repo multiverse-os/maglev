@@ -6,7 +6,7 @@ import (
 	app "github.com/multiverse-os/maglev"
 
 	cli "github.com/multiverse-os/cli"
-	config "github.com/multiverse-os/webkit/config"
+	config "github.com/multiverse-os/webframe/config"
 )
 
 // TODO: THIS will have issues unless explicitly ran within the right directly,

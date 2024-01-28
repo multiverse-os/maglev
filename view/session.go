@@ -3,7 +3,7 @@ package view
 import (
 	form "github.com/multiverse-os/maglev/view/component/form"
 
-	html "github.com/multiverse-os/webkit/html"
+	html "github.com/multiverse-os/webframe/html"
 )
 
 // TODO: These need to be returning a view

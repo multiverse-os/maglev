@@ -3,7 +3,7 @@ package view
 import (
 	css "github.com/multiverse-os/maglev/view/asset/css"
 
-	html "github.com/multiverse-os/webkit/html"
+	html "github.com/multiverse-os/webframe/html"
 )
 
 // TODO: Views should use this default template, and extend it for each page by
@@ -78,7 +78,7 @@ func DefaultTemplate(title string, yield html.Element) html.Element {
 					html.Div.Class("columns").Containing(
 						html.Div.Class("column", "is-two-fifths").Containing(
 							html.H4.Class("footer-title").Text("A web framework"),
-							html.P.Class("footer-description").Text("Desktop user interfaces using webkit to render the single page responses that focus on HTML and CSS to avoid introducing potential security vulnerabilities."),
+							html.P.Class("footer-description").Text("Desktop user interfaces using webframe to render the single page responses that focus on HTML and CSS to avoid introducing potential security vulnerabilities."),
 							html.P.Class("footer-description").Text("And maximize preformance but also provide a simple portable design. This text is essentially lorem text."),
 						),
 						html.Div.Class("column"),
