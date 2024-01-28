@@ -2,7 +2,10 @@ module github.com/multiverse-os/maglev
 
 go 1.19
 
-require github.com/multiverse-os/cli v0.1.0
+require (
+	github.com/multiverse-os/cli v0.1.0
+	github.com/multiverse-os/webframe v0.0.0-00010101000000-000000000000
+)
 
 require (
 	github.com/multiverse-os/ansi v0.0.0-20230122075550-10efed87b9d4 // indirect
