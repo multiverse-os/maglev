@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/multiverse-os/cli v0.1.0
-	github.com/multiverse-os/webframe v0.1.5
+	github.com/multiverse-os/webframe v0.1.6
 )
 
 require (
