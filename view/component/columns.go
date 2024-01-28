@@ -3,7 +3,7 @@ package component
 import (
 	"strconv"
 
-	html "github.com/multiverse-os/webkit/html"
+	html "github.com/multiverse-os/webframe/html"
 )
 
 func Columns(elements ...html.Element) html.Element {

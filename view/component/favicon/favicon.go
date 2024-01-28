@@ -1,7 +1,7 @@
 package favicon
 
 import (
-	html "github.com/multiverse-os/webkit/html"
+	html "github.com/multiverse-os/webframe/html"
 )
 
 func (self *Template) FaviconTag() html.Element {

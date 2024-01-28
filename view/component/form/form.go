@@ -1,8 +1,8 @@
 package form
 
 import (
-	html "github.com/multiverse-os/webkit/html"
-	//attribute "github.com/multiverse-os/webkit/html/framework/attribute"
+	html "github.com/multiverse-os/webframe/html"
+	//attribute "github.com/multiverse-os/webframe/html/framework/attribute"
 )
 
 func TextInput(name, placeholder string) html.Element {

@@ -1,7 +1,7 @@
 package flash
 
 import (
-	html "github.com/multiverse-os/webkit/html"
+	html "github.com/multiverse-os/webframe/html"
 )
 
 // Notifications may be a better name

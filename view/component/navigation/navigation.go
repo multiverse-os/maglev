@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	html "github.com/multiverse-os/webkit/html"
+	html "github.com/multiverse-os/webframe/html"
 )
 
 type Sitemap struct {
