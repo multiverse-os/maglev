@@ -8,8 +8,7 @@ package app
 // one can basically setup the application somewhere around initialization
 // and this is initialization.
 import (
-	"fmt"
-
+	"github.com/multiverse-os/maglev/controller"
 	framework "github.com/multiverse-os/webframe"
 )
 
@@ -21,20 +20,13 @@ func Init(cfg framework.Config) App {
 	app := App{framework.Init(cfg)}
 
 	// Database Initialization
-	// TODO: This is a alias to setup all three of these basic databases
+	// TODO, maybe I should pass the databases I want to intiailize so I can
+	// be selective and get rid of the app.KV()
+
 	app.InitializeDBs()
 	//app.KV(framework.ModelStore)
 	//app.KV(framework.CacheStore)
 	//app.KV(framework.SessionStore)
-
-	app.Framework.Cache().Put([]byte("key"), []byte("value"))
-
-	val, _ := app.Framework.Cache().Get([]byte("key"))
-
-	fmt.Printf(
-		"GET[on]CacheDB app.Framework.Cache().Get([]byte('key')): %v\n",
-		string(val),
-	)
 
 	// Model
 	app.NewModel("user")
@@ -44,15 +36,6 @@ func Init(cfg framework.Config) App {
 	// Controller
 	app.NewController("app")
 	app.NewController("session")
-
-	// TODO: We really want to be able to establish middleware here, the routes
-	// on the otherhand should be in routes, maybe the middleware should be
-	// there too
-	//router.Use(middleware.RealIP)
-	//router.Use(middleware.Logger)
-	//router.Use(middleware.Recoverer)
-	//router.Use(middleware.DefaultCompress)
-	//router.Use(middleware.Timeout(60 * time.Second))
 
 	// Server
 	// TODO: This should be automatic and hidden, we want as much as possible
@@ -67,8 +50,8 @@ func Init(cfg framework.Config) App {
 	return app
 }
 
-func (app App) Controller(name string) Controller {
-	return Controller(app.Controllers[name])
+func (app App) Controller(name string) controller.Actions {
+	return controller.Actions(app.Controllers[name])
 }
 
 func (app *App) Model(name string) Model {

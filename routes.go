@@ -5,6 +5,14 @@ import (
 )
 
 func (app *App) Routes() {
+	// TODO: We really want to be able to establish middleware here, the routes
+	// on the otherhand should be in routes, maybe the middleware should be
+	// there too
+	//app.Router.Use(middleware.RealIP)
+	//app.Router.Use(middleware.Logger)
+	//app.Router.Use(middleware.Recoverer)
+	//app.Router.Use(middleware.DefaultCompress)
+	//app.Router.Use(middleware.Timeout(60 * time.Second))
 
 	// TODO: Right now the differation between the separate controllers is
 	// meaningless because it carries no other data than the framework its
