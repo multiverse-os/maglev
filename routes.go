@@ -27,6 +27,11 @@ func (app *App) Routes() {
 	//    Controller will need a way to handle mapping paths to actions
 	//               and a way to interact with the models in a sane manner
 
+	// TODO: THis looks right, we route a specific path to a controller action
+	// and this will be very much like Rails which we are trying to mimic as
+	// much as possible. SO many web frameworks claim to be rails like but this
+	// web framework should feel natural to rails users ideally
+
 	app.Router.Get("/", app.Controller("app").Root)
 	app.Router.Get("/ducks", app.Controller("app").Root)
 	app.Router.Get("/login", app.Controller("session").Login)

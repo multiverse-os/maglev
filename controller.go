@@ -1,7 +1,7 @@
-package controller
+package app
 
 import (
 	framework "github.com/multiverse-os/webframe"
 )
 
-type Controller framework.Controller
+type Controller *framework.Controller

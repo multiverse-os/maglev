@@ -11,7 +11,11 @@ import (
 func (c Controller) Login(body http.ResponseWriter, request *http.Request) {
 	defer c.Framework.Benchmark(time.Now(), "Login()")
 	c.Framework.Log("c.Framework.Config.Name=(%v)\n", c.Framework.Config.Name)
-	c.Framework.Log("c.Framework.DB().CacheStore=(%v)", c.Framework.CacheDB().Store)
+
+	// TODO: But really we should let cache store precompiled HTML that doesn't
+	// change throughout the session or other important data to be grabbed
+	// easily
+	c.Framework.Log("c.Framework.Cache()=(%v)", c.Framework.Cache())
 
 	body.Write(view.Login().Bytes())
 }

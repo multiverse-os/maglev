@@ -10,9 +10,6 @@ package app
 import (
 	"fmt"
 
-	controller "github.com/multiverse-os/maglev/controller"
-	model "github.com/multiverse-os/maglev/model"
-
 	framework "github.com/multiverse-os/webframe"
 )
 
@@ -48,41 +45,19 @@ func Init(cfg framework.Config) App {
 	app.NewController("app")
 	app.NewController("session")
 
-	// NEW CONTROLLER DESIGN
-	//   The new design is implementing a controller type that is separate from
-	//   routes and the server.
-
-	//   This controller object will implement serverMux, Handler() by having a
-	//   ServeHTTP() method.
-
-	//   This controller will hold model/database access and be able to create a
-	//   limited access context that is passed to views in a standardized way (not
-	//   random parameters on views
-
-	//   (database is separate, only interaction with db is via model interaction)
-
-	//   router=controller, and you build the complete router by creating a tree
-	//   of encapsualted routes in routers that are linked together by the way
-	//   they path.
-
-	// **IMPORTANT** We dont ever assign to the "fallback" handler (the global
-	// one), we create our own router and set it and the handler when setting up
-	// the http server. (IDEALLY we create it in a way we could easily have a
-	// ServerDNS() handler to setup a dns server in a near identical way.
-
+	// TODO: We really want to be able to establish middleware here, the routes
+	// on the otherhand should be in routes, maybe the middleware should be
+	// there too
 	//router.Use(middleware.RealIP)
 	//router.Use(middleware.Logger)
 	//router.Use(middleware.Recoverer)
 	//router.Use(middleware.DefaultCompress)
 	//router.Use(middleware.Timeout(60 * time.Second))
 
-	//// Set up our root handlers
-	//router.Get("/", HelloWorld)
-
-	//// Set up our API
-	//router.Mount("/api/v1/", v1.NewRouter())
-
 	// Server
+	// TODO: This should be automatic and hidden, we want as much as possible
+	// hidden that isn't changed by the developer, here we only want things the
+	// developer can affect
 	app.Routes()
 	app.HTTP().UseRouter(app.Router)
 
@@ -92,10 +67,10 @@ func Init(cfg framework.Config) App {
 	return app
 }
 
-func (app App) Controller(name string) controller.Controller {
-	return controller.Controller(app.Controllers[name])
+func (app App) Controller(name string) Controller {
+	return Controller(app.Controllers[name])
 }
 
-func (app App) Model(name string) model.Model {
-	return model.Model(app.Models[name])
+func (app *App) Model(name string) Model {
+	return app.Models[name]
 }

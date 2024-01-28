@@ -31,6 +31,9 @@ import (
 // session file in views. This way in views its ONLY the completed pages to
 // serve up.
 
+// TODO: This should feel as much as possible as setting up actions in a
+// controller
+
 func (c Controller) Root(body http.ResponseWriter, request *http.Request) {
 	defer c.Framework.Benchmark(time.Now(), "Root()")
 	// TODO: Where in the world would this be getting set??? realistically
