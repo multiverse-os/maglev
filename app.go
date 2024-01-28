@@ -25,10 +25,12 @@ func Init(cfg framework.Config) App {
 
 	app.Framework.CacheDB().Store.Put([]byte("key"), []byte("value"))
 	val, _ := app.Framework.CacheDB().Store.Get([]byte("key"))
-	fmt.Printf("GET[on]CacheDB app.Framework.CacheDB().Store.Get([]byte('key')):", string(val))
+	fmt.Printf("GET[on]CacheDB app.Framework.CacheDB().Store.Get([]byte('key')): %v\n", string(val))
 
 	// Model
 	app.NewModel("user")
+	app.NewModel("post")
+	app.NewModel("task")
 
 	// Controller
 	app.NewController("app")
