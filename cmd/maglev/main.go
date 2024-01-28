@@ -9,6 +9,9 @@ import (
 	config "github.com/multiverse-os/webkit/config"
 )
 
+// TODO: THIS will have issues unless explicitly ran within the right directly,
+// make a make command that
+
 // TODO: Review the additional functionality provided by Rails binary, so that
 // features like `rails notes` can be added (which scans files for TODO and for
 // our purposes NOTE, and likely define what it looks for via YAML configuration
